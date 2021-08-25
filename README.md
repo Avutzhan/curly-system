@@ -12,6 +12,7 @@
 - docker-compose exec -T app composer require laravel/socialite
 - docker kill $(docker ps -q)
 - docker-compose exec -T app composer require predis/predis
+- docker-compose exec -T app php artisan make:mail TestMail
 
 [Tutorial](https://www.linkedin.com/pulse/how-create-laravel-development-environment-using-docker-isaac-souza/)
 

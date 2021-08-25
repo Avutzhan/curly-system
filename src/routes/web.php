@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Redis;
+use App\Mail\TestMail;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +26,8 @@ Route::get('/store', function() {
 
 Route::get('/retrieve', function() {
     return Redis::get('foo');
+});
+
+Route::get('/send-email', function() {
+    Mail::to('isaac@isaacsouza.dev')->send(new TestMail);
 });

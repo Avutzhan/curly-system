@@ -59,4 +59,12 @@ services:
     networks:
       - app-network
 
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    container_name: mailhog
+    restart: unless-stopped
+    ports:
+      - 8025:8025
+    networks:
+      - app-network
 
