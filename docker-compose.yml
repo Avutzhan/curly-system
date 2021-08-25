@@ -48,3 +48,15 @@ services:
       - ./nginx/conf:/etc/nginx/conf.d
     networks:
       - app-network
+
+  redis:
+    image: redis:6.2.1-buster
+    container_name: redis
+    restart: unless-stopped
+    tty: true
+    volumes:
+      - ./redis/data:/data
+    networks:
+      - app-network
+
+
