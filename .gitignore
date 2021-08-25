@@ -13,3 +13,5 @@
 /src/yarn-error.log
 /src/.idea
 /src/.vscode
+/mysql
+/redis
