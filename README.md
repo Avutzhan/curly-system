@@ -10,8 +10,8 @@
 - docker-compose exec -T app php artisan config:clear
 - docker-compose exec -T app php artisan migrate
 - docker-compose exec -T app composer require laravel/socialite
+- docker kill $(docker ps -q)
 
 [Tutorial](https://www.linkedin.com/pulse/how-create-laravel-development-environment-using-docker-isaac-souza/)
 
-# curly-system
 # curly-system
