@@ -13,6 +13,11 @@
 - docker kill $(docker ps -q)
 - docker-compose exec -T app composer require predis/predis
 - docker-compose exec -T app php artisan make:mail TestMail
+- sudo composer create-project laravel/laravel .
+- docker rm -f $(docker ps -a -q)
+- docker rmi -f $(docker images -a -q)
+- docker volume rm $(docker volume ls -q)
+- docker network rm $(docker network ls | tail -n+2 | awk '{if($2 !~ /bridge|none|host/){ print $1 }}')
 
 [Tutorial](https://www.linkedin.com/pulse/how-create-laravel-development-environment-using-docker-isaac-souza/)
 
